@@ -4,7 +4,7 @@ let value2 = document.getElementById('value2')
 let value3 = document.getElementById('value3')
 let Stop = document.getElementById('stop')
 let start = document.getElementById('start')
-let restart = document.getElementById('restart')
+//let restart = document.getElementById('restart')
 let speed = document.getElementById('speed')
 
 let values = [
@@ -16,6 +16,8 @@ function getRandomValues() {
 }
 
 let animationId;
+
+/*
 restart.onclick = function(){
     document.documentElement.style.setProperty('--speed', 5)
     animationId = setInterval(() => {
@@ -24,16 +26,23 @@ restart.onclick = function(){
         value3.innerText = getRandomValues()
     },300)  
     speed.value = 0
+    speed.onchange = function(ev){
+        document.documentElement.style.setProperty('--speed', ev.target.value)
+        speed.value = ev.target.value
+    }
 }
+*/
 start.onclick = function(ev) {
-    console.log("hello")
+    document.documentElement.style.setProperty('--speed', 5)
     animationId = setInterval(() => {
         value1.innerText = getRandomValues()
         value2.innerText = getRandomValues()
         value3.innerText = getRandomValues()
     },300)  
+    speed.value = 0
     speed.onchange = function(ev){
         document.documentElement.style.setProperty('--speed', ev.target.value)
+        speed.value = ev.target.value
     }
 }
 
