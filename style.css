@@ -1,0 +1,67 @@
+
+:root{
+    --speed: 2s;
+}
+
+.machine{
+    background-color: crimson;
+    height: 370px;
+    width: 1100px;
+    margin: 80px;
+    border: solid yellow 50px;
+    display: inline-flex;
+}
+
+body{
+    background-color:tomato;
+}
+
+h1{
+    font-size: 50pt;
+    color: darkblue;
+}
+
+.slot{
+    background-color: white;
+    border: solid green 10px;
+    width: 250px;
+    height: 225px;
+    margin: 50px; 
+    padding: 10px;
+    overflow: hidden;
+}
+
+.value{
+    font-size: 150px;
+    animation: slotspin linear infinite;
+    animation-duration: calc(1s/ var(--speed));
+}
+
+button{
+    height: 100px;     
+    width: 275px;
+    font-size: 40pt;
+    margin-inline-start: 200px;
+}
+
+input{
+    width: 100px;
+    height: 80px;
+    font-size: 50px;
+    background-color: aquamarine;
+}
+
+label{
+    font-size: 30pt;
+    color: indigo;
+    font-weight: bolder;
+}
+  
+@keyframes slotspin {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(-200px);
+    }
+}

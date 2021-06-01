@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slot Machine</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script async defer src="script.js"></script>
 </head>
 <body>
-    
+    <h1 align = "center">SLOT MACHINE GAME</h1>
+    <div class = "container">
+        <div class = "machine">
+            <div class = "slot" >
+                <div class = "value" id = "value1">🍒</div>
+            </div>
+            <div class = "slot">
+                <div class = "value" id = "value2">🍊</div>
+            </div>
+            <div class = "slot">
+                <div class = "value" id = "value3">🍐</div>
+            </div>
+        </div>
+        <label for = "count">Control the Speed:</label>
+        <input id = "speed" type = "number" min = 1 max = 10>
+        <div class = "row" align="center">
+            <button id = "stop">STOP</button>
+            <button id = "start">START</button>
+            <button id = "restart">RESTART</button>
+        </div>
+    </div>
 </body>
 </html>
